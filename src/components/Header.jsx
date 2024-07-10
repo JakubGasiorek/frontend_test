@@ -8,5 +8,5 @@ export default function  Header() {
       <p className="header__text">Zadanie <strong>rekrutacyjne</strong></p>
     </header>
   )
-}
+} 
 
