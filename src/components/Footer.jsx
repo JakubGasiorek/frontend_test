@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function Footer() {
+export default function Footer({addName}) {
 
   const [showOptions, setShowOptions] = useState(false);
 
   const handleReset = () => {
-    
+    addName("")
   };
 
   const handleAddName = () => {
-
+    addName("Jakub Gąsiorek")
   };
 
   return (
