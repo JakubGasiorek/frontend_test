@@ -1,11 +1,14 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
   font-family: 'OpenSans', sans-serif;
+}
+body {
   background-color: $primary-color;
   min-height: 100vh;
+  color: $text-color;
 }
 
 header {
@@ -14,7 +17,6 @@ header {
   display: flex;
   width: 100%;
   background-color: $header-color;
-  color: $text-color;
   text-align: center;
   justify-content: space-between;
   align-items: center;
@@ -31,15 +33,52 @@ header {
 .header__text{
   margin-right: 2rem;
   font-size: 2em;
-  line-height: 10px;
   text-align: right;
 }
 
-
 main {
-  padding-top: 60px;
+  position: relative;
+  top: 15rem;
   display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main__hr{
+  margin-top: 0.5rem;
+  width: 10rem;
+}
+
+.main__text{
+  font-weight: 400; 
+}
+
+.main__header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.main__blocks{
+  margin: 5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.main__blocks-block1, .main__blocks-block2, .main__blocks-block3 {
+  flex: 1;
+}
+
+.main__blocks-block3{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer {
@@ -99,7 +138,6 @@ footer {
   &:hover{
     color: $text-color-hover;
     cursor: pointer;
-
   }
 }
 
@@ -114,9 +152,24 @@ footer {
     height: 4rem;
   }
 
+  .main__blocks {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main__blocks-block1, .main__blocks-block2 {
+    order: 1;
+    flex: 1 1 45%;
+  }
+
+  .main__blocks-block3 {
+    order: 2;
+    flex: 1 1 100%;
+    margin:2em 0;
+  }
+
   .footer__button{
     width: 150px;
     margin-left: 2em;
-
   }
 }
