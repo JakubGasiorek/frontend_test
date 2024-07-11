@@ -1,6 +1,6 @@
 # Overview
 This project is a React-based web application that showcases a dynamic content management interface. It includes a header, main content section with multiple blocks, and a footer with options to manage and display content dynamically. The application demonstrates the use of React hooks for state management and effects, as well as CSS for styling and transitions.
-<a href='https://jolly-puffpuff-acfa45.netlify.app' target="_blank">Checkout the website<a>
+<a href='https://jolly-puffpuff-acfa45.netlify.app' target="_blank">Check out the site <a>
 
 # Features
 - Dynamic Content Management: Users can replace or append content dynamically based on selected options.
