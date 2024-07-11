@@ -3,7 +3,7 @@
  - Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg). ✅
  - CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) powinna wykonać animowany obrót. ✅
  - Zastosowanie BEM. ✅
- - Spełnianie zasad a11y. ✅
+ - Spełnianie zasad a11y.
  - Logiczne wykorzystanie jednostek rem, em, vh, vw (w efekcie jak najmniejsze użycie jednostki px) - w taki sposób by w efekcie responsywność spełniona została jak najmniejszą ilością kodu. ✅
  - Mobile first ✅
  - Doklejając treść sprawić by w ostatnim bloku treści były posortowane alfabetycznie. ✅
