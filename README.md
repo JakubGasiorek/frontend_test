@@ -1,16 +1,3 @@
-# Additional tasks completed
- - Osadzenie całego zadania w JSowym frameworku. ✅
- - Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg). ✅
- - CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) powinna wykonać animowany obrót. ✅
- - Zastosowanie BEM. ✅
- - Spełnianie zasad a11y.
- - Logiczne wykorzystanie jednostek rem, em, vh, vw (w efekcie jak najmniejsze użycie jednostki px) - w taki sposób by w efekcie responsywność spełniona została jak najmniejszą ilością kodu. ✅
- - Mobile first ✅
- - Doklejając treść sprawić by w ostatnim bloku treści były posortowane alfabetycznie. ✅
- - Przy doklejaniu treści w przypadku niemożliwości spełnienia warunku by była unikalna wyświetlić stosowny komunikat. ✅
- - Button w footerze ("pokaż") wysuwający ramkę bez użycia JSa. ✅
- - Rezultat prac wrzucić do podglądu na jakąś darmową platformę. ✅ <a href='https://jolly-puffpuff-acfa45.netlify.app' target="_blank">Site<a>.
-
 # Overview
 This project is a React-based web application that showcases a dynamic content management interface. It includes a header, main content section with multiple blocks, and a footer with options to manage and display content dynamically. The application demonstrates the use of React hooks for state management and effects, as well as CSS for styling and transitions.
 
