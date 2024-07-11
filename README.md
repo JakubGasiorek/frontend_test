@@ -1,59 +1,38 @@
-# Zadanie rekrutacyjne
+# Overview
+This project is a React-based web application that showcases a dynamic content management interface. It includes a header, main content section with multiple blocks, and a footer with options to manage and display content dynamically. The application demonstrates the use of React hooks for state management and effects, as well as CSS for styling and transitions.
 
-Witaj,
+# Features
+- Dynamic Content Management: Users can replace or append content dynamically based on selected options.
+- Radio Button Form: A form with radio buttons to select different content options.
+- Footer Options: A footer section with options to reset settings and display personal data.
+- Interactive UI: Smooth transitions and visibility toggling for content sections.
 
-Prosimy Ciê o wykonanie poni¿szego zadania najlepiej jak tylko umiesz. Pozwoli to nam lepiej oceniæ Twoje umiejêtnoœci :)
+# Usage
 
-## OPIS
-W katalogu znajdziesz projekt graficzny. Prosimy Ciê o jego pociêcie oraz napisanie funkcjonalnoœci dla poszczególnych elementów. Swoje prace rób jako fork tego repozytorium.
+Main Content
+The main content area consists of three blocks:
+- Block One: Contains a radio button form to select content options.
+- Block Two: Contains buttons to replace or append content based on the selected option.
+- Block Three: Displays the used content.
 
+Footer
+The footer includes options to:
+- Reset Settings: Resets the application state and hides the options.
+- Show Personal Data: Displays predefined personal data.
 
-### CEL
+# Interaction
+Radio Button Form: Select an option to determine which content to display or append.
+Replace Button: Replaces the current content with the selected option.
+Append Button: Appends the selected content option to the existing content.
+Footer Options: Hover over the footer button to display options and click to execute actions.
 
-- Pociêta strona ma wype³niaæ ca³e okno przegl¹darki (nie zamykaæ contentu w kontenerze o sta³ej szerokoœci). Przy reponsywnoœci mo¿esz zastosowaæ dowolne breakpointy, samemu uznaj jak bêdzie najlepiej.
+# Code Structure
+App Component: The main component managing the overall state and rendering header, main content, and footer.
+Header Component: Displays the header text.
+MainContent Component: Manages and displays the main content blocks and handles content updates.
+Footer Component: Manages footer options and handles user interactions.
 
-- Header powinien byæ na sta³e przyklejony do topu, Logo HTML5 w headerze powinno linkowaæ do '/' .  
-
-- Stopka strony w przypadku ma³ej iloœci treœci w contencie powinna i tak byæ na samym dole strony a nie 'doklejaæ' siê pod contentem.
-
-- W bloku pierwszym s¹ radiobuttony, ich wybór a nastêpnie klikniêcie przycisku w bloku drugim wykona akcjê podmiany lub doklejenia tekstu w bloku ostatnim. Treœci które maj¹ zostaæ u¿yte nale¿y pobraæ z JSONa (szczegó³y ni¿ej). Opcja pierwsza wybierze zawsze treœæ pierwsz¹, opcja druga drug¹ a opcja losowa dowoln¹ z pozosta³ych. Ka¿da osobna treœæ w ostatnim bloku powinna byæ objêta tagiem <article>. Doklejaj¹c treœæ nale¿y unikn¹æ powielania ju¿ istniej¹cej treœci (w przypadku u¿ycia opcji losowej nale¿y wylosowaæ kolejn¹ jeszcze nie u¿yt¹ treœæ). 
-
-- Button 'poka¿' w footerze po klikniêciu pokazuje ramkê (wysuwa j¹ spod footera) z 2 klikalnymi opcjami. Pierwsza przywraca stronê do pocz¹tkowych ustawieñ, druga w headerze dokleja Twoje imiê i nazwisko.
-
-
-### PLIK JSON
-Zbudowaæ plik z tablic¹ przynajmniej 6 elementów zawieraj¹cych dowoln¹ treœæ. Wolno w JSONie trzymaæ dodatkowe dane je¿eli uproœci to wykonanie zadania.
-
-
-### WARUNKI
-- Nie u¿ywaæ bootstrapa/tailwinda ani innych podobnych frameworków.
-- Zastosowaæ SCSS.
-- Poni¿ej 960px wed³ug uznania dokonaæ zmian w projekcie by jak najlepiej przedstawiæ stronê (najlepiej wykorzystaæ przyk³ad projektu mobilnego).
-
-
-### DODATKOWE PLUSY
-- Osadzenie ca³ego zadania w jakimœ JSowym frameworku (najlepiej Angular).
-- Brak plików graficznych w koñcowym projekcie (brak plików typu jpg, gif, png, svg).
-- CSS IS AWESOME w footerze - po najechaniu myszk¹ ramka (bez tekstu) powinna wykonaæ animowany obrót.
-- Zastosowanie BEM.
-- Spe³nianie zasad a11y.
-- Logiczne wykorzystanie jednostek rem, em, vh, vw (w efekcie jak najmniejsze u¿ycie jednostki px) - w taki sposób by w efekcie responsywnoœæ spe³niona zosta³a jak najmniejsz¹ iloœci¹ kodu.
-- Mobile first.
-- Doklejaj¹c treœæ sprawiæ by w ostatnim bloku treœci by³y posortowane alfabetycznie.
-- Przy doklejaniu treœci w przypadku niemo¿liwoœci spe³nienia warunku by by³a unikalna wyœwietliæ stosowny komunikat (np. alert/dialog/modal).
-- Button w footerze ("poka¿") wysuwaj¹cy ramkê bez u¿ycia JSa.
-- Rezultat prac wrzuciæ do podgl¹du na jak¹œ darmow¹ platformê (np. netlify/heroku).
-
-
-### ZADANIE NA 6 :)
-- Wykorzystaæ localStorage do za³adowania treœci z pliku i ich póŸniejszego przechowywania oraz napisaæ dodatkow¹ funkcjonalnoœæ pozwalaj¹c¹ na zarz¹dzanie nimi (dodawanie/edycja/usuwanie).
-
-
-## UWAGI
-Projekt nie musi byæ 'pixel perfect'. Z uwagi na brak pliku Ÿród³owego a jedynie jpg nale¿y wymiary samemu zmierzyæ. Ale przyk³adowo je¿eli jakiœ element po zmierzeniu wydaje siê ¿e ma 139px to dobr¹ praktyk¹ bêdzie zaokr¹gliæ go do 140px. U¿yty w projekcie font to OpenSans.
-
-
-## WYSY£KA PRACY
-Nale¿y przes³aæ link do swojego repozytorium z rozwi¹zaniem. Dodatkowo wrzuæ dokument tekstowy z list¹ rzeczy których nie uda³o siê wykonaæ z celów g³ównych oraz listê rzeczy które zrobiono dodatkowo.
-
-POWODZENIA :)
+# Styling
+The application uses CSS for styling and transitions:
+Transitions: Smooth transitions for content visibility and opacity.
+Flexbox: Layout management for main content and footer options.
