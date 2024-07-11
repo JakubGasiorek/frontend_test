@@ -1,59 +1,12 @@
-import { useState, useEffect } from "react";
 import RadioButtonForm from "./RadioButtonForm";
-import data from "/src/data/content.json";
 
-export default function MainContent() {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [usedContent, setUsedContent] = useState([]);
-  const [contentList, setContentList] = useState([]);
-
-  useEffect(() => {
-    setContentList(data.content);
-  }, []);
-
-  const handleRadioChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
-  const handleReplace = () => {
-    let newContent = "";
-    if (selectedOption === "1") {
-      newContent = contentList[0];
-    } else if (selectedOption === "2") {
-      newContent = contentList[1];
-    } else if (selectedOption === "random") {
-      const remainingContent = contentList.filter(
-        (content) => !usedContent.includes(content)
-      );
-      newContent =
-        remainingContent[Math.floor(Math.random() * remainingContent.length)];
-    }
-    setUsedContent([newContent]);
-  };
-
-  const handleAppend = () => {
-    let newContent = "";
-    if (selectedOption === "1") {
-      newContent = contentList[0];
-    } else if (selectedOption === "2") {
-      newContent = contentList[1];
-    } else if (selectedOption === "random") {
-      const remainingContent = contentList.filter(
-        (content) => !usedContent.includes(content)
-      );
-      if (remainingContent.length === 0) {
-        alert("Wszystkie dane zostały użyte");
-        return;
-      }
-      newContent =
-        remainingContent[Math.floor(Math.random() * remainingContent.length)];
-    }
-
-    if (!usedContent.includes(newContent)) {
-      setUsedContent((prevContent) => [...prevContent, newContent]);
-    }
-  };
-
+export default function MainContent({
+  selectedOption,
+  usedContent,
+  handleRadioChange,
+  handleReplace,
+  handleAppend,
+}) {
   return (
     <main>
       <div className="main__header">
@@ -63,7 +16,10 @@ export default function MainContent() {
       <div className="main__blocks">
         <div className="main__blocks-block1">
           <h2>Blok pierwszy</h2>
-          <RadioButtonForm handleRadioChange={handleRadioChange} />
+          <RadioButtonForm
+            handleRadioChange={handleRadioChange}
+            selectedOption={selectedOption}
+          />
         </div>
         <div className="main__blocks-block2">
           <h2>Blok drugi</h2>
