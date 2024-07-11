@@ -1,9 +1,11 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 export default function  Header({myName}) {
   return (
     <header>
       <a href="/">
-        <img src="/logo.png" alt="Logo HTML5" id="logo" className="header__logo"/>
+        <FontAwesomeIcon className="header__logo" icon={faHtml5}/>
       </a>
       <div>
         <p className="header__text">Zadanie <strong>rekrutacyjne</strong></p>

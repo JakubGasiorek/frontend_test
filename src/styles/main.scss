@@ -1,10 +1,12 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0;
   font-family: 'OpenSans', sans-serif;
 }
+
 body {
   background-color: $primary-color;
   min-height: 100vh;
@@ -25,9 +27,17 @@ header {
 }
 
 .header__logo{
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-left: 2rem;
+  color: $text-color;
+  transition: ease-in-out 0.2s;
+  background-color: $footer-text-color;
+  padding: 1vh;
+  border-radius: 50%;
+  &:hover{
+    background-color: $text-color-hover;
+  }
 }
 
 .header__text{
@@ -83,6 +93,7 @@ main {
 
 footer {
   position: absolute;
+  display: inline-block;
   width: 100%;
   bottom: 0;
   background-color: $footer-color;
@@ -95,12 +106,30 @@ footer {
 }
 
 .footer__text{
+  position: relative;
+  display: inline-block;
   border: 1px solid $primary-color;
   margin-left: 2rem;
   padding: 0.5rem;
   width: 55px;
   color: $footer-text-color;
   cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $primary-color;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+
+  &:hover:before {
+    border-color: $text-color-hover;
+    transform: rotate(0.5turn);
+  }
 }
 
 .footer__button{
@@ -148,8 +177,8 @@ footer {
   }
 
   .header__logo{
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .main__blocks {
